@@ -1,35 +1,14 @@
 [
   {
     "py/object": "model.project.Project", 
-    "status": "stable", 
-    "description": "TitleO", 
+    "status": "obsolete", 
+    "description": "Title0|N", 
     "view_status": "private", 
     "enabled": null, 
     "inherit_global": {
       "py/function": "__main__.random_boolean"
     }, 
-    "name": "namewp-"
-  }, 
-  {
-    "py/object": "model.project.Project", 
-    "status": "release", 
-    "description": "Title,Ppu", 
-    "view_status": "private", 
-    "enabled": null, 
-    "inherit_global": {
-      "py/function": "__main__.random_boolean"
-    }, 
-    "name": "nameoB %L "
-  }, 
-  {
-    "py/object": "model.project.Project", 
-    "status": "stable", 
-    "description": "Title1", 
-    "view_status": "private", 
-    "enabled": null, 
-    "inherit_global": {
-      "py/function": "__main__.random_boolean"
-    }, 
-    "name": "name%z^U$G}<"
+    "id": null, 
+    "name": "name1_pr?"
   }
 ]
