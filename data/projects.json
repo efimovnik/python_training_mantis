@@ -2,34 +2,34 @@
   {
     "py/object": "model.project.Project", 
     "status": "stable", 
-    "description": "Title`c'", 
-    "view_status": "public", 
+    "description": "TitleO", 
+    "view_status": "private", 
     "enabled": null, 
     "inherit_global": {
       "py/function": "__main__.random_boolean"
     }, 
-    "name": "name8 W2q.zV."
+    "name": "namewp-"
   }, 
   {
     "py/object": "model.project.Project", 
-    "status": "development", 
-    "description": "Title4", 
-    "view_status": "public", 
+    "status": "release", 
+    "description": "Title,Ppu", 
+    "view_status": "private", 
     "enabled": null, 
     "inherit_global": {
       "py/function": "__main__.random_boolean"
     }, 
-    "name": "name4s"
+    "name": "nameoB %L "
   }, 
   {
     "py/object": "model.project.Project", 
-    "status": "obsolete", 
-    "description": "Title6W", 
-    "view_status": "public", 
+    "status": "stable", 
+    "description": "Title1", 
+    "view_status": "private", 
     "enabled": null, 
     "inherit_global": {
       "py/function": "__main__.random_boolean"
     }, 
-    "name": "nameoM&s9*%"
+    "name": "name%z^U$G}<"
   }
 ]

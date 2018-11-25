@@ -2,8 +2,9 @@
 
 class Project:
 
-    def __init__(self, name=None, status=None, inherit_global=None, enabled=None, view_status=None, description=None):
+    def __init__(self, id=None, name=None, status=None, inherit_global=None, enabled=None, view_status=None, description=None):
         self.name = name
+        self.id = id
         self.status = status
         self.inherit_global = inherit_global
         self.enabled = enabled

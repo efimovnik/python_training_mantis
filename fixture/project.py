@@ -27,17 +27,12 @@ class ProjectHelper:
         self.open_projects_page()
         self.project_cache = None
 
-    def delete_project(self):
+    def delete_project_by_id(self, id):
         wd = self.app.wd
         self.open_projects_page()
-        self.select_project()
+        self.select_project_by_id(id)
         wd.find_element_by_xpath("//input[@value='Delete Project']").click()
         wd.find_element_by_xpath("//input[@value='Delete Project']").click()
-
-    def select_project(self):
-        wd = self.app.wd
-        projects = wd.find_elements_by_class_name("row-1")
-        wd.find_elements_by_class_name("row-1").find_element_by_tag_name("td").click()
 
     def select_project_by_id(self, id):
         wd = self.app.wd
@@ -70,7 +65,7 @@ class ProjectHelper:
         wd = self.app.wd
         self.open_projects_page()
         projects = []
-        for element in wd.find_elements_by_class_name("row-1") and wd.find_elements_by_class_name("row-2"):
+        for element in wd.find_elements_by_class_name("row-1"):
             cells = element.find_elements_by_tag_name("td")
             name = cells[0].text
             status = cells[1].text
