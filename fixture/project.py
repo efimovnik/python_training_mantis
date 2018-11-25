@@ -27,10 +27,29 @@ class ProjectHelper:
         self.open_projects_page()
         self.project_cache = None
 
+    def delete_project(self):
+        wd = self.app.wd
+        self.open_projects_page()
+        self.select_project()
+        wd.find_element_by_xpath("//input[@value='Delete Project']").click()
+        wd.find_element_by_xpath("//input[@value='Delete Project']").click()
+
+    def select_project(self):
+        wd = self.app.wd
+        projects = wd.find_elements_by_class_name("row-1")
+        wd.find_elements_by_class_name("row-1").find_element_by_tag_name("td").click()
+
+    def select_project_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("a[href='manage_proj_edit_page.php?project_id=%s']" % id).click()
+
     def fill_project_form(self, project):
+        wd = self.app.wd
         self.change_field_name("name", project.name)
         self.select_status("status", project.status)
         self.select_status("view_state", project.view_status)
+        if project.inherit_global == True:
+            wd.find_element_by_name("inherit_global").click()
         self.change_field_name("description", project.description)
 
     def select_status(self, field_status_name, text):
@@ -46,6 +65,21 @@ class ProjectHelper:
             wd.find_element_by_name(field_name).click()
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
+
+    def get_project_list(self):
+        wd = self.app.wd
+        self.open_projects_page()
+        projects = []
+        for element in wd.find_elements_by_class_name("row-1") and wd.find_elements_by_class_name("row-2"):
+            cells = element.find_elements_by_tag_name("td")
+            name = cells[0].text
+            status = cells[1].text
+            enabled = cells[2].text
+            view_status = cells[3].text
+            description = cells[4].text
+            projects.append(Project(name=name, status=status, enabled=enabled, view_status=view_status,
+                                    description=description))
+        return projects
 
     project_cache = None
 
