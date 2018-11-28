@@ -16,7 +16,7 @@ class Project:
         return "%s;%s;%s;%s;%s;%s" % (self.name, self.status, self.inherit_global, self.enabled, self.view_status, self.description)
 
     def __eq__(self, other):
-        return self.name == other.name and self.description == other.description
+        return self.name == other.name
 
     def name_or_max(self):
         if self.name:

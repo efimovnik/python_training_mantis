@@ -1,14 +1,14 @@
 [
   {
     "py/object": "model.project.Project", 
-    "status": "obsolete", 
-    "description": "Title0|N", 
+    "status": "development", 
+    "description": "Title_", 
     "view_status": "private", 
     "enabled": null, 
     "inherit_global": {
       "py/function": "__main__.random_boolean"
     }, 
     "id": null, 
-    "name": "name1_pr?"
+    "name": "nameQ)CZ/"
   }
 ]
